@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>lazyload</title>
+  <script src="./index.js"></script>
+  <!-- <script src="./index2.js"></script> -->
+  <style>
+  .container {
+      width: 100%
+  }
+  .img-sec{
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .photos {
+      width: 500px;
+      height:350px;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="img-sec">
+      <!--<img class="photos" onerror='this.src="loading1.png"' data-src="./img/1.png">-->
+      <img class="photos"  data-src="./img/1.png" src="./img/loading.gif">
+    </div>
+    <div class="img-sec">
+        <img class="photos"  data-src="./img/2.png" src="./img/loading.gif">
+    </div>
+    <div class="img-sec">
+        <img class="photos"  data-src="./img/3.png" src="./img/loading.gif">
+    </div>
+    <div class="img-sec">
+        <img class="photos"  data-src="./img/4.png" src="./img/loading.gif">
+    </div>
+     <div class="img-sec">
+        <img class="photos"  data-src="./img/5.png" src="./img/loading.gif">
+    </div>
+     <div class="img-sec">
+        <img class="photos"  data-src="./img/6.png" src="./img/loading.gif">
+    </div>
+  </div>
+  <script>
+    window.onload=checkImgs;
+    window.onscroll = throttle(checkImgs, 200, 500);
+  </script>
+</body>
+
+</html>
